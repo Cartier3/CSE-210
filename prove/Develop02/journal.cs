@@ -42,7 +42,7 @@ public class Journal
 
         using(StreamWriter outputFile = new StreamWriter(filename, append:true))
         {
-            foreach(string entry in entries)
+            foreach (string entry in entries)
             {
                 outputFile.WriteLine(entry);
             }

@@ -33,6 +33,7 @@ class Program
             if (userInput == 1)
             {
                 Console.WriteLine($"Today's Date: {dateText}");
+                
                 Console.Write(dailyPrompt);
                 
                 Console.WriteLine("\nWrite your entry here:");
@@ -58,11 +59,13 @@ class Program
             else if (userInput == 5)
             {
                 finished = true;
+                
                 Console.WriteLine("Thank your for using the Journal Program!");
             }
             else
             {
                 Console.WriteLine("Sorry that is not a valid response for this program!");
+                
                 Console.WriteLine("Please try again!");
             }
     
