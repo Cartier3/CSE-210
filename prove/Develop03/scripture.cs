@@ -12,7 +12,7 @@ class Scripture
     
     public Scripture(string text)
     {
-        // This Constructor calls and converts each new, random Instance of the 'Word' class into a 'Word' object, puts them in the 'words' list, and splits them.
+        // This Constructor calls and converts each new part of the user input into a 'Word' object, puts them in the 'words' list, and splits them.
         words = text.Split(' ') 
                 .Select(w => new Word(w))
                 .ToList();

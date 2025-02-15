@@ -27,7 +27,7 @@ class Program
             scriptures.DisplayVerse();  // This calls the DisplayVerse() Method within the 'scripture' class.
             
              
-            Console.WriteLine("\nPress the 'Enter' key to hide more words or type 'quit' to exit:");     //This prompts the user to press Enter to continue hiding the words within their verse.
+            Console.WriteLine("\nPress the 'Enter' key to hide more words or type 'quit' to exit:");    //This prompts the user to press Enter to continue hiding the words within their verse.
             string userInput = Console.ReadLine();  //This collects the user's input to enter or quit the program.
             if (userInput.ToLower() == "quit") break;   // This code tells the program to break/quit if the user types the word'quit' whether the letters are lowercase or uppercase.
             
