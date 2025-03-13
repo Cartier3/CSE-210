@@ -1,3 +1,5 @@
+using System.ComponentModel;
+
 class Goal
 {
     private string _name;
@@ -6,24 +8,26 @@ class Goal
 
     private int _points;
 
-    private int _numberG;
+    public Goal(string name, string desc, int points)
+    {
+        _name = name;
 
-    public Goal()
+        _desc = desc;
+
+        _points = points;
+    }
+
+    public void IsCompleted()
     {
 
     }
 
-    public void SaveGoal()
+    public void SetCompleted()
     {
 
     }
 
-    public void LoadGoal()
-    {
-
-    }
-
-    public void RepGoal()
+    public void GetGoalPoint()
     {
 
     }
