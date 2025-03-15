@@ -2,11 +2,11 @@ using System.ComponentModel;
 
 class Goal
 {
-    private string _name;
+    protected string _name;
 
-    private string _desc;
+    protected string _desc;
 
-    private int _points;
+    protected int _points;
 
     public Goal(string name, string desc, int points)
     {
@@ -17,20 +17,31 @@ class Goal
         _points = points;
     }
 
-    public void IsCompleted()
+    public virtual string GetGoalDetails()
     {
-
+        return $"{_name}: {_desc} Points: {_points} points";
     }
 
-    public void SetCompleted()
+    public virtual string GetGoalDetailsForSave()
     {
-
+        return $"SimpleGoal|{_name}|{_desc}|{_points}";
     }
 
-    public void GetGoalPoint()
+    public string GetName()
     {
-
+        return _name;
     }
 
+    public string GetDesc()
+    {
+        return _desc;
+    }
+
+    public int GetPoints()
+    {
+        Console.WriteLine($"\nCongratulations! You have earned {_points} points!!");
+        
+        return _points;
+    }
 
 }

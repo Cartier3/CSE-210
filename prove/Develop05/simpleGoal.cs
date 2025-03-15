@@ -2,48 +2,27 @@ using System.ComponentModel.DataAnnotations;
 
 class SimpleGoal : Goal
 {
-    private bool completed;
+    private bool _completed;
 
     public SimpleGoal(string name, string desc, int points)
         :base(name, desc, points)
     {
-        completed = false;
+        _completed = false;
     }
 
-    public void Display()
+    public override string GetGoalDetails()
     {
-        Console.WriteLine("Your Simple Goals are:");
-        Console.WriteLine($"\nName: ");
-        Console.WriteLine($"Description: ");
-        Console.WriteLine($"Point Value: ");
+        return $"{_name}: {_desc} Points: {_points} Completed: {(_completed ? "[X]" : "[]")}";
     }
 
-    public void GetRed()
+    public override string GetGoalDetailsForSave()
     {
-
-    }
-
-    public void SetRed()
-    {
-
+        return $"SimpleGoal|{_name}|{_desc}|{_points}";
     }
 
     public virtual void IsCompleted()
     {
-        
+        _completed = true;
     }
-
-    public virtual void SetCompleted()
-    {
-
-    }
-
-    public virtual void GetGoalPoint()
-    {
-
-    }
-
-
-
     
 }

@@ -14,10 +14,11 @@ class Menu
     public void DisplayGoalMenu()
     {
         Console.WriteLine("\nThe types of Goals are:");
-        Console.WriteLine("1. Simple Goal");
+        Console.WriteLine("\n1. Simple Goal");
         Console.WriteLine("2. Eternal Goal");
         Console.WriteLine("3. Checklist Goal");
     }
+
 
     public int GetUserInput()
     {
